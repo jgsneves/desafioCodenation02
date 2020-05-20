@@ -22,7 +22,7 @@ class Employee:
 class Manager(Employee):
     def __init__(self, code, name, salary):
         super().__init__(code, name, salary)
-        self.departament = Department('managers', 1)
+        self.__departament = Department('managers', 1)
 
     def calc_bonus(self):
         return self.salary * 0.15
