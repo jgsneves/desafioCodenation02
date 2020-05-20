@@ -16,7 +16,7 @@ class Employee:
         pass
 
     def get_hours(self):
-        return 6
+        return 8
 
 
 class Manager(Employee):
