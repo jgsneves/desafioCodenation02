@@ -2,8 +2,8 @@
 
 class Department:
     def __init__(self, name, code):
-        self.name = name
-        self.code = code
+        self._name = name
+        self._code = code
 
 
 class Employee:
@@ -54,4 +54,3 @@ class Seller(Manager):
 
     def calc_bonus(self):
         return self._sales * 0.15
-
