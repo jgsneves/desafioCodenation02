@@ -8,9 +8,12 @@ class Department:
 
 class Employee:
     def __init__(self, code, name, salary):
-        self.code = code
-        self.name = name
-        self.salary = salary
+        if (type(self) == Employee):
+            raise TypeError('Proibido instanciamento direto.')
+        else:
+            self.code = code
+            self.name = name
+            self.salary = salary
 
     def calc_bonus(self):
         pass
