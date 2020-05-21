@@ -31,7 +31,7 @@ class Manager(Employee):
         return self.salary * 0.15
 
     def get_department(self):
-        return self._departament
+        return self._departament.name
 
     def set_department(self, name, code):
         self._departament = Department(name, code)
@@ -50,7 +50,7 @@ class Seller(Manager):
         self._sales = self._sales + value
 
     def get_department(self):
-        return self._departament
+        return self._departament.name
 
     def set_department(self, name, code):
         self._departament = Department(name, code)
