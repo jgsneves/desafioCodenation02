@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 
 
 class Department:
@@ -6,15 +7,13 @@ class Department:
         self._code = code
 
 
-class Employee:
+class Employee(ABC):
     def __init__(self, code, name, salary):
-        if (type(self) == Employee):
-            raise TypeError('Proibido instanciamento direto.')
-        else:
-            self.code = code
-            self.name = name
-            self.salary = salary
+        self.code = code
+        self.name = name
+        self.salary = salary
 
+    @abstractmethod
     def calc_bonus(self):
         pass
 
